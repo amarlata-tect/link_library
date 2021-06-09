@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.link_library.field_add_link_library
+    - node.type.link_library
+  module:
+    - links_library
+    - user
+id: node.link_library.default
+targetEntityType: node
+bundle: link_library
+mode: default
+content:
+  field_add_link_library:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: linksLibraryFormatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

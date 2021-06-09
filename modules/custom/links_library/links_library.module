@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function links_library_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['librarylinks'] = [
+    'variables'      => [
+      'linksFromLibrary'     => NULL,
+      'libraryLinks'        => NULL,
+      'links'               => NULL,
+      'linkTitle'           => NULL,
+
+    ],
+    'template'       => 'librarylinks',
+    'render element' => 'element',
+    'path'           => $path . '/templates',
+
+  ];
+
+  return $theme;
+}

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Template file for adimo module.
+ */
+#}
+  {% if linksFromLibrary  %}
+    {% set link_field = drupal_field('field_link', 'taxonomy_term', libraryLinks) %}
+    <a href = "{{ link_field.0['#url'] }}">{{ drupal_field('name', 'taxonomy_term', libraryLinks) }}</a>
+  {% else %}
+    {% if links %}
+      <a href = "{{ links }}">
+      {% if linkTitle %}
+        {{ linkTitle }}
+      {% else %}
+        {{ drupal_field('title', 'node', links) }}
+      {% endif %}
+      </a>
+    {% endif %}
+  {% endif %}

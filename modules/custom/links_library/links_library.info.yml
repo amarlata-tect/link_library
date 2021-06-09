@@ -1,0 +1,14 @@
+name: 'Links Library'
+type: module
+description: "Add link library globally in project."
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - field
+  - link
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+  - twig_tweak

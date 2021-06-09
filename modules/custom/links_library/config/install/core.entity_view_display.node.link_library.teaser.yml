@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.link_library.field_add_link_library
+    - node.type.link_library
+  module:
+    - user
+id: node.link_library.teaser
+targetEntityType: node
+bundle: link_library
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_add_link_library: true
